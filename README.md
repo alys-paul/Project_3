@@ -10,11 +10,11 @@ This project predicts the total fare amount for taxi trips using a machine learn
 ## 🚀 Project Structure
 
 ```
-├── trip_fare.py            # Script for cleaning, feature engineering, and training
-├── best_fare_model.pkl     # Saved trained model (RandomForest)
-├── fare_prediction.py      # Streamlit UI for live predictions
-├── taxi_data.csv           # NYC taxi trip dataset
-└── README.md               # Project documentation
+├── regression.ipynb            # Script for cleaning, feature engineering, and training
+├── taxi_fare_predictor.pkl     # Saved trained model 
+├── taxi_streamlit.ipynb        # Streamlit UI for live predictions
+├── taxi_data.csv               # NYC taxi trip dataset
+└── README.md                   # Project documentation
 ```
 
 ---
@@ -70,15 +70,6 @@ pip install -r requirements.txt
 # or install manually:
 pip install pandas scikit-learn streamlit matplotlib seaborn
 ```
-
----
-
-## 📃 Files
-
-* `trip_fare.py` : Model training pipeline
-* `best_fare_model.pkl` : Pickled trained model
-* `fare_prediction.py` : Web UI for predictions
-* `taxi_data.csv` : Raw data
 
 ---
 
