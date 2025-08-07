@@ -3,7 +3,7 @@ Trip Fare : Predicting Urban Taxi Fare with Machine Learning
 
 # Taxi Fare Prediction 🚚
 
-This project predicts the total fare amount for taxi trips using a machine learning model. It includes data preprocessing, model training with Random Forest, hyperparameter tuning, and a deployed Streamlit app for real-time fare predictions.
+This mini-project is a web application for predicting NYC taxi fares based on pickup/dropoff coordinates, passenger count, and trip time. It uses a trained ML model and runs entirely on Google Colab using Streamlit + ngrok, so no local setup is required.
 
 ---
 
@@ -29,56 +29,57 @@ This project predicts the total fare amount for taxi trips using a machine learn
 * Datetime & vendor info
 
 ---
+## 📦 Features
+* Estimate fare based on trip distance and time
 
-## 🧑‍💻 Model
+* User-friendly web UI with Streamlit
 
-* **Algorithm:** Random Forest Regressor
-* **Evaluation Metric:** RMSE
-* **Tuning:** RandomizedSearchCV
-* **Best Params:** Automatically selected and stored
+* Hosted from Colab via public ngrok link
+
+* Supports .pkl models trained with scikit-learn, xgboost, and pandas
 
 ---
+## 💻 Streamlit App 
 
-## 💻 Streamlit App (`fare_prediction.py`)
+## 🧪 How to Run in Google Colab
+* Open the Colab notebook.
 
-**What it does:**
+* Run each cell step-by-step:
 
-* Accepts inputs like location, time, passenger count, etc.
-* Displays predicted total fare from trained model
+* Install dependencies
 
-### To Run:
+* Upload your trained model (taxi_fare_predictor.pkl)
+
+* Auto-generate the app.py file (Streamlit code)
+
+* Launch app with ngrok (public link appears)
+
+* Click the ngrok link printed in the final cell to access your live app.
+
+## 💡 Inputs in the App
+* Pickup Date and Time
+
+* Pickup Latitude & Longitude
+
+* Dropoff Latitude & Longitude
+
+* Passenger Count
+
+## 📈 Output
+* Predicted Fare in USD based on the input trip
+
+## 🔧 Dependencies
+Ensure the following versions were used to train your model (for compatibility):
 
 ```bash
-streamlit run fare_prediction.py
+scikit-learn==1.6.1  
+xgboost==3.0.3  
+pandas==2.2.2  
+streamlit  
+pyngrok  
+cloudpickle  
 ```
-
 ---
 
-## ✅ Setup Instructions
 
-1. **Create Environment:**
 
-```bash
-python -m venv myenv
-myenv\Scripts\activate  # Windows
-```
-
-2. **Install Requirements:**
-
-```bash
-pip install -r requirements.txt
-# or install manually:
-pip install pandas scikit-learn streamlit matplotlib seaborn
-```
-
----
-
-## 🔧 Notes
-
-* Python 3.11 was used
-* Ensure column alignment between training and prediction features
-* Streamlit UI includes background image and trip duration
-
----
-
-Happy Predicting! 🤝
